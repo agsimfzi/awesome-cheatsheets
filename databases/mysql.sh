@@ -7,20 +7,12 @@ mysql -u username -p database_name < file.sql                         # Import d
 
 SHOW PROCESSLIST; # Show you any queries that are currently running or in the queue to run
 
-# *****************************************************************************
-# Users and Privileges
-# *****************************************************************************
+show status where `variable_name` = 'Threads_connected'; # Show all connected threads
+show variables like 'max_connections'; # Show maximum number of allowed connections
+SET GLOBAL max_connections = 150; ## Set new value for maximum connections (no restart needed but for permanent change update my.cnf)
 
-# Replace 'host' with '%' to indicate any host
+GRANT ALL PRIVILEGES ON prospectwith.* TO 'power'@'localhost' WITH GRANT OPTION; # Grant all privileges on database
 
-CREATE USER 'user'@'host'; # Create user
-DROP USER 'user'@'host'; # Remove user.
+CREATE USER 'newuser'@'localhost' IDENTIFIED BY 'password'; # Create user
 
-GRANT ALL PRIVILEGES ON base.* TO 'user'@'host' IDENTIFIED BY 'password'; # Grant access to database using password
-GRANT SELECT, INSERT, DELETE ON base.* TO 'user'@'host' IDENTIFIED BY 'password'; # Grant specific privileges to database using password
-GRANT ALL PRIVILEGES ON base.* TO 'user'@'host' WITH GRANT OPTION; # Grant **all** privileges on database
-
-REVOKE ALL PRIVILEGES ON base.* FROM 'user'@'host'; # Remove privileges on database
-REVOKE ALL PRIVILEGES, GRANT OPTION FROM 'user'@'host'; # Remove **all** privileges on database
-
-FLUSH PRIVILEGES; # Use **only** if you modify grant tables directly using statements like INSERT, UPDATE or DELETE.
+mysql -u root -pmypassword -e "MY SQL QUERY" &>> query.log & disown # Run SQL query in the background
