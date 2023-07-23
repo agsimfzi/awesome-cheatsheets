@@ -8,7 +8,7 @@
 
 ## 🤔 Why Awesome-Cheatsheets?
 
-I usually make a cheat sheet when I want to improve my skills in a programming language, a framework or a development tool. [I started doing these kinds of things a long time ago on Gist](https://gist.github.com/LeCoupa). To better keep track of the history and to let people contribute, I reorganized all of them into this single repository. Most of the content is coming from official documentation and some books I have read.
+I usually make a cheat sheet when I want to improve my skills in a programming language, a framework or a development tool. [I started doing these kinds of things a long time ago on Gist](https://gist.github.com/LeCoupa). To better keep track of the history and to let people contribute, I re-organized all of them into this single repository. Most of the content is coming from official documentation and some books I have read.
 
 Feel free to take a look. You might learn new things. They have been designed to provide a quick way to assess your knowledge and to save you time.
 
@@ -69,6 +69,7 @@ Feel free to take a look. You might learn new things. They have been designed to
 #### Basics
 
 - [HTML5](frontend/html5.html)
+- [CSS3](frontend/css3.css)
 
 #### Frameworks
 
@@ -123,6 +124,7 @@ Feel free to take a look. You might learn new things. They have been designed to
 - [Nginx](tools/nginx.sh)
 - [PM2](tools/pm2.sh)
 - [Ubuntu](tools/ubuntu.sh)
+- [Firebase CLI](tools/firebase_cli.md)
   </details>
 
 ## 🙌🏼 How to Contribute?
